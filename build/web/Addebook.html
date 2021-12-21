@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  
+        body{  
+            font-family: Calibri, Helvetica, sans-serif;  
+            background-image: url('Images/Lib BackGround.jpg');  
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }  
+        .container {  
+            padding: 50px;  
+            background-color: lavender; 
+        }  
+
+        input[type=text]{  
+            width: 100%;  
+            padding: 15px;  
+            margin: 5px 0 22px 0;  
+            display: inline-block;  
+            border: none;  
+            background: #f1f1f1;  
+        }  
+        input[type=text]:focus{  
+            background-color: orange;  
+            outline: none;  
+        }  
+        .registerbtn {  
+            background-color: #4CAF50;  
+            color: white;  
+            padding: 16px 40px; 
+            border: none;  
+            cursor: pointer;  
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+            opacity: 0.9;
+        }  
+    </style>  
+</head>  
+<body>  
+    <form method="Post" action="AddBookServlet">  
+        <div class="container">  
+            <center>  <h1> E Book Upload Form</h1> </center>  
+            <center>  <h2> Digital Library, SKCT </h2> </center>
+            <hr>  
+            <label> ISBN Number </label>   
+            <input type="text" name="ISBN_Number" placeholder= "ISBN Number" size="6" pattern="^(\w{2})+(\d{4})$" required oninvalid="this.setCustomValidity('ISBN Number must contain 2 characters and 4 digits')" oninput="this.setCustomValidity('')"/>   
+            <label> Book Name </label>   
+            <input type="text" name="Book_Name" placeholder="Book Name" size="15" required/>   
+            <label> Author First Name </label>    
+            <input type="text" name="Author_First_Name" placeholder="Author First Name" size="15" pattern = "^([a-zA-Z]{3,10})$" required oninvalid="this.setCustomValidity('First Name must contain atleast 3 charecters')" oninput="this.setCustomValidity('')"/>
+            <label> Author Last Name </label>    
+            <input type="text" name="Author_Last_Name"  placeholder="Author Last Name" size="15" pattern = "^([a-zA-Z]{3,10})$" required oninvalid="this.setCustomValidity('Last Name must contain atleast 3 charecters')" oninput="this.setCustomValidity('')"/>
+            <label> File Location on your disk </label>    
+            <input type="text" name="location" placeholder="Enter File Location on your disk" pattern="^([A-Za-z]:)(\\[A-Za-z_\-\s0-9\.]+)+$" required oninvalid="this.setCustomValidity('Invalid File path')" oninput="this.setCustomValidity('')"/>
+            <button type="submit" class="registerbtn">Register</button> 
+            <h1></h1>   
+    </form> 
+</body>  
+</html>  
+
+

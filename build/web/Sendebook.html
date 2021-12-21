@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  
+        body{  
+            font-family: Calibri, Helvetica, sans-serif;  
+            background-image: url('Images/Lib BackGround.jpg');  
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }  
+        .container {  
+            padding: 50px;  
+            background-color: lavender; 
+        }  
+
+        input[type=text],button{  
+            width: 100%;  
+            padding: 15px;  
+            margin: 5px 0 22px 0;  
+            display: inline-block;  
+            border: none;  
+            background: #f1f1f1;  
+        }  
+        input[type=text]:focus{  
+            background-color: orange;  
+            outline: none;  
+        }  
+        .registerbtn { 
+            width: 25%;
+            margin-left: 38%;
+            background-color: #4CAF50;  
+            color: white;  
+        }  
+    </style>  
+    <script>
+        var request = new XMLHttpRequest();
+        function searchInfo() {
+            var name = document.myForm.book_name.value;
+            var url = "Search.jsp?val=" + name;
+
+            try {
+                request.onreadystatechange = function () {
+                    if (request.readyState == 4) {
+                        var val = request.responseText;
+                        document.getElementById('mylocation').innerHTML = val;
+                    }
+                }//end of function  
+                request.open("GET", url, true);
+                request.send();
+            } catch (e) {
+                alert("Unable to connect to server");
+            }
+        }
+    </script>  
+</head>  
+<body>  
+    <form name="myForm" method="Post" action="SendBookServlet">  
+        <div class="container">  
+            <center>  <h1> E Book Download Form</h1> </center>  
+            <center>  <h2> Digital Library, SKCT </h2> </center>
+            <hr>  
+            <label> Book Name </label>   
+            <input type="text" name="book_name" placeholder= "Book Name" onkeyup="searchInfo()"/>   
+            <label> ISBN Number </label>   
+            <input type="text" name="ISBN_Number" placeholder= "ISBN Number" size="6" pattern="^(\w{2})+(\d{4})$" required oninvalid="this.setCustomValidity('ISBN Number must contain 2 characters and 4 digits')" oninput="this.setCustomValidity('')"/>   
+            <label> Email Id </label>   
+            <input type="text" name="email_id" placeholder= "Email ID" pattern="^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$" required oninvalid="this.setCustomValidity('Invalid email')" oninput="this.setCustomValidity('')"/>   
+            <button type="submit" class="registerbtn">Submit</button> 
+            <h1></h1>   
+    </form> 
+    <span id="mylocation"></span>  
+</body>  
+</html>  

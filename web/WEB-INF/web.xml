@@ -4,9 +4,17 @@
         <servlet-name>StoreFileServlet</servlet-name>
         <servlet-class>AddEBook.AddBookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SendBookServlet</servlet-name>
+        <servlet-class>SendBook.SendBookServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>StoreFileServlet</servlet-name>
         <url-pattern>/StoreFileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendBookServlet</servlet-name>
+        <url-pattern>/SendBookServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
