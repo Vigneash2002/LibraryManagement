@@ -7,17 +7,19 @@ and open the template in the editor.
 <html>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKCT|Upload Book</title>
     <style>  
         body{  
             font-family: Calibri, Helvetica, sans-serif;  
-            background-image: url('Images/Lib BackGround.jpg');  
+            background-image: url('Images/Library.gif');  
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
         }  
         .container {  
             padding: 50px;  
-            background-color: lavender; 
+            background-image: url('Images/book.gif');   
+            background-size: cover;
         }  
 
         input[type=text]{  
@@ -62,7 +64,7 @@ and open the template in the editor.
             <label> Author Last Name </label>    
             <input type="text" name="Author_Last_Name"  placeholder="Author Last Name" size="15" pattern = "^([a-zA-Z]{3,10})$" required oninvalid="this.setCustomValidity('Last Name must contain atleast 3 charecters')" oninput="this.setCustomValidity('')"/>
             <label> File Location on your disk </label>    
-            <input type="text" name="location" placeholder="Enter File Location on your disk" pattern="^([A-Za-z]:)(\\[A-Za-z_\-\s0-9\.]+)+$" required oninvalid="this.setCustomValidity('Invalid File path')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="location" placeholder="Enter File Location on your disk" required/>
             <button type="submit" class="registerbtn">Register</button> 
             <h1></h1>   
     </form> 

@@ -3,10 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/JAVA/LibraryManagement/web/Images/book.gif</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/SendBookFail.html</file>
+            <file>file:/E:/JAVA/LibraryManagement/nbproject/build-impl.xml</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/SendBook/SendBook.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/AddEBook/AddBookServlet.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/WEB-INF/web.xml</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/Search.jsp</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/AddBookFail.html</file>
             <file>file:/E:/JAVA/LibraryManagement/web/index.html</file>
             <file>file:/E:/JAVA/LibraryManagement/src/java/AddEBook/AddBook.java</file>
-            <file>file:/E:/JAVA/LibraryManagement/src/java/AddEBook/AddBookServlet.java</file>
-            <file>file:/E:/JAVA/LibraryManagement/web/newhtml.html</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/Addebook.html</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/AddEBook/AddBookBean.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/SendBook/SendMail.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/SendBook/SendBookBean.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/SendBookSuccess.html</file>
+            <file>file:/E:/JAVA/LibraryManagement/src/java/SendBook/SendBookServlet.java</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/Sendebook.html</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/Images/ebook.jpg</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/Images/Library.gif</file>
+            <file>file:/E:/JAVA/LibraryManagement/web/AddBookSuccess.html</file>
         </group>
     </open-files>
 </project-private>

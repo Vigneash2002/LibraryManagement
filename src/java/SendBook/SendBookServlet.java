@@ -42,15 +42,7 @@ public class SendBookServlet extends HttpServlet {
                 response.sendRedirect("SendBookSuccess.html");  
             }
             else{
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet StoreFileServerlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Book not sent successfully "+"</h1>");
-            out.println("</body>");
-            out.println("</html>");
+                response.sendRedirect("SendBookFail.html");
             }
         }
     }

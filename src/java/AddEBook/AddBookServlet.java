@@ -31,26 +31,10 @@ public class AddBookServlet extends HttpServlet {
             ob.setfile_path(request.getParameter("location"));
             ob.setbook_name(request.getParameter("Book_Name"));
             if(AddBook.insert(ob)){
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet StoreFileServerlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>file stored successfully "+"</h1>");
-            out.println("</body>");
-            out.println("</html>");
+                response.sendRedirect("AddBookSuccess.html");
             }
             else{
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet StoreFileServerlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>file not stored successfully "+"</h1>");
-            out.println("</body>");
-            out.println("</html>");
+                response.sendRedirect("AddBookFail.html");
             }
         }
     }
